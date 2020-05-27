@@ -21,10 +21,6 @@ php artisan key:generate
 
 php artisan migrate
 
-Then:
-
-php artisan db:seed
-
 Then
 
 php artisan passport:install
