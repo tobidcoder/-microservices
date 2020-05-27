@@ -1,3 +1,58 @@
+
+Run: git clone https://github.com/tobidcoder/microservices.git
+
+Then: cd microservices
+
+Then : composer install
+
+Then
+
+npm install
+
+Then: Create database micro
+
+cp .env.example .env
+
+Change database name in .env to micro
+
+Run
+
+php artisan key:generate
+
+php artisan migrate
+
+Then:
+
+php artisan db:seed
+
+Then
+
+php artisan passport:install
+
+Finally Run
+
+php artisan serve
+
+Open postman. create account.
+
+Set headers with Auth token generate.
+
+<p> Happy testing. </p> 
+
+Routes:
+    post: http://127.0.0.1:8000/api/login/ 
+    post: http://127.0.0.1:8000/api/register/ 
+    get: http://127.0.0.1:8000/api/employers/
+    post: http://127.0.0.1:8000/api/employers/
+    put: http://127.0.0.1:8000/api/employers/{id}
+    delete: http://127.0.0.1:8000/api/employers/{id}
+    get: http://127.0.0.1:8000/api/banks/
+    post: http://127.0.0.1:8000/api/banks/
+    put: http://127.0.0.1:8000/api/banks/{id}
+    delete: http://127.0.0.1:8000/api/banks/{id}
+    http://127.0.0.1:8000/api/updateemployment/
+    http://127.0.0.1:8000/api/createemployment/
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
