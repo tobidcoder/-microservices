@@ -109,6 +109,25 @@ class RegisterController extends BaseController
         return $this->sendResponse(new UserResource($user), 'Employment updated successfully.');
     }
 
-    
+    public function showStaffEmployer(){
+
+        $staffemployer = User::with('employer')->get();
+        if($staffemployer->count() === 0){ 
+            return response()->json([ 
+            'success' => false, 
+            'message' => 'Staff Employer not found' 
+        ], 404); 
+ 
+      } 
+       
+      elseif($staffemployer){ 
+            return response()->json([ 
+                'data' => $staffemployer->toArray(), 
+                ], 200); 
+        } else { 
+            return response()->json(['error' => 'UnAuthorised'], 401); 
+        } 
+
+    }
 
 }
