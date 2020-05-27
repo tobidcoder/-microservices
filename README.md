@@ -46,8 +46,10 @@ Routes:
     post: http://127.0.0.1:8000/api/banks/
     put: http://127.0.0.1:8000/api/banks/{id}
     delete: http://127.0.0.1:8000/api/banks/{id}
-    http://127.0.0.1:8000/api/updateemployment/
-    http://127.0.0.1:8000/api/createemployment/
+    get: http://127.0.0.1:8000/api/updateemployment/
+    get: http://127.0.0.1:8000/api/createemployment/
+    get: http://127.0.0.1:8000/api/employerstaff/
+    get: http://127.0.0.1:8000/api/staffemployer/
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
