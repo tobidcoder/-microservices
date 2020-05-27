@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Resources\User as UserResource;
 use App\User;
+use App\Employer;
 use Illuminate\Support\Facades\Auth;
 use Validator;
    
@@ -107,5 +108,7 @@ class RegisterController extends BaseController
    
         return $this->sendResponse(new UserResource($user), 'Employment updated successfully.');
     }
+
+    
 
 }

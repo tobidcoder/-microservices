@@ -16,7 +16,7 @@ class Employer extends Model
     ];
 
     //Get employer staff (user)
-    public function user(){
+    public function users(){
         return $this->hasMany('App\User');
 }
 }

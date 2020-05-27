@@ -17,6 +17,7 @@ Route::post('register', 'RegisterController@register');
 Route::post('login', 'RegisterController@login');
 
 Route::middleware('auth:api')->group( function () {
+    Route::get('showEmployerStaff', 'EmployerController@showEmployerStaff'); 
     Route::resource('employers', 'EmployerController'); 
     Route::resource('banks', 'BankController'); 
     Route::PUT('createemploment', 'RegisterController@createEmployment'); 

@@ -133,7 +133,26 @@ class EmployerController extends BaseController
         return $this->sendResponse([], 'Employer deleted successfully.');
     }
 
-    
+    public function showEmployerStaff(){
+
+        $employerStaff = Employer::with('users')->get();
+        if($employerStaff->count() === 0){ 
+            return response()->json([ 
+            'success' => false, 
+            'message' => 'Employer staff not found' 
+        ], 404); 
+ 
+      } 
+       
+      elseif($employerStaff){ 
+            return response()->json([ 
+                'data' => $employerStaff->toArray(), 
+                ], 200); 
+        } else { 
+            return response()->json(['error' => 'UnAuthorised'], 401); 
+        } 
+
+    }
 }
 
 
