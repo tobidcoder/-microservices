@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('register', 'RegisterController@register');
 Route::post('login', 'RegisterController@login');
-Route::resource('employers', 'EmployerController'); 
-Route::resource('banks', 'BankController'); 
-Route::PUT('createemploment', 'RegisterController@createEmployment'); 
-Route::PUT('updateemployment', 'RegisterController@updateEmployment');
+
 Route::middleware('auth:api')->group( function () {
-   
+    Route::resource('employers', 'EmployerController'); 
+    Route::resource('banks', 'BankController'); 
+    Route::PUT('createemploment', 'RegisterController@createEmployment'); 
+    Route::PUT('updateemployment', 'RegisterController@updateEmployment');
 
 });
